@@ -1,0 +1,61 @@
+---
+import siteContent from '../content';
+
+const { contact } = siteContent;
+
+// Build the list of social links, filtering out empty values
+const socials = [
+  contact.linkedin && { label: 'LinkedIn', href: contact.linkedin },
+  contact.github   && { label: 'GitHub',   href: contact.github },
+  contact.twitter  && { label: 'Twitter',  href: contact.twitter },
+  contact.bluesky  && { label: 'Bluesky',  href: contact.bluesky },
+  contact.scholar  && { label: 'Scholar',  href: contact.scholar },
+].filter(Boolean) as { label: string; href: string }[];
+---
+
+<footer id="contact" class="py-20 md:py-28 border-t border-slate-200">
+  <div class="max-w-3xl mx-auto px-6">
+    <!-- Section header -->
+    <div class="flex items-center gap-4 mb-10">
+      <h2 class="text-xl font-bold text-slate-900 whitespace-nowrap">Contact</h2>
+      <div class="h-px flex-1 bg-slate-200" aria-hidden="true"></div>
+    </div>
+
+    <p class="text-slate-600 leading-relaxed max-w-md mb-8 text-sm">
+      Open to SWE roles with an AI/ML focus. The best way to reach me is by email.
+    </p>
+
+    <!-- Email CTA -->
+    {contact.email && (
+      <a
+        href={`mailto:${contact.email}`}
+        class="inline-block text-base font-medium text-blue-600 hover:text-blue-700 hover:underline underline-offset-2 mb-10"
+      >
+        {contact.email}
+      </a>
+    )}
+
+    <!-- Socials -->
+    {socials.length > 0 && (
+      <div class="flex flex-wrap gap-6 mb-16">
+        {socials.map(({ label, href }) => (
+          <a
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-sm text-slate-500 hover:text-blue-600 transition-colors"
+          >
+            {label}
+          </a>
+        ))}
+      </div>
+    )}
+
+    <!-- Footer line -->
+    <p class="text-xs text-slate-400">
+      Built with <a href="https://astro.build" target="_blank" rel="noopener noreferrer" class="hover:text-slate-600 transition-colors">Astro</a>
+      &amp; <a href="https://tailwindcss.com" target="_blank" rel="noopener noreferrer" class="hover:text-slate-600 transition-colors">Tailwind CSS</a>,
+      hosted on <a href="https://pages.github.com" target="_blank" rel="noopener noreferrer" class="hover:text-slate-600 transition-colors">GitHub Pages</a>.
+    </p>
+  </div>
+</footer>
