@@ -98,16 +98,6 @@ const siteContent = {
       links: [],
       tech: ["Python"]
     },
-    // {
-    //   company: "Self-Employed",
-    //   url: "",
-    //   role: "Freelance Software Engineer",
-    //   dates: "Feb. 2021 – Nov. 2021",
-    //   bullets: [
-    //     "Delivered 10+ client projects spanning data pipelines, automation scripts, and custom software in Python and SQL, achieving Top Rated status through consistently high client satisfaction.",
-    //   ],
-    //   links: [],
-    // },
   ] as ExperienceItem[],
 
   // ── Projects ─────────────────────────────────────────────────────────────────
@@ -139,21 +129,13 @@ const siteContent = {
         // { label: "GitHub", url: "https://github.com/johnkaya/TODO" },
       ],
     },
-    // Add more projects here. At least one more AI/ML-flavored software project recommended.
-    // {
-    //   name: "Project Name",
-    //   description: "One-line description.",
-    //   details: "2–4 sentences.",
-    //   tech: ["Python", "..."],
-    //   links: [{ label: "GitHub", url: "https://github.com/johnkaya/..." }],
-    // },
   ] as Project[],
 
   // ── Contact ───────────────────────────────────────────────────────────────────
   contact: {
     email: "johnkayatx@gmail.com",
-    linkedin: "https://linkedin.com/in/johnkaya",
-    github: "https://github.com/johnkaya",
+    linkedin: "https://linkedin.com/in/alirkaya",
+    github: "https://github.com/alirkaya",
     twitter: "",   // leave empty to hide
     bluesky: "",   // leave empty to hide
     scholar: "",   // leave empty to hide
@@ -164,7 +146,7 @@ const siteContent = {
   resumeUrl: "/resume.pdf",
 
   // ── Site meta ─────────────────────────────────────────────────────────────────
-  siteUrl: "https://alirkaya.github.io",
+  siteUrl: "https://johnkaya.github.io",
   metaDescription:
     "John Kaya — software engineer specializing in backend systems and ML pipelines, based in Dallas, TX.",
 };
